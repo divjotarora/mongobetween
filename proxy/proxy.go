@@ -164,11 +164,11 @@ func (p *Proxy) accept(l net.Listener, m *mongo.Mongo) {
 		wg.Add(1)
 		opened("connection_opened", []string{})
 		go func() {
-			log.Info("Accept")
+			// log.Info("Accept")
 			handleConnection(log, p.statsd, c, m, p.kill)
 
 			_ = c.Close()
-			log.Info("Close")
+			// log.Info("Close")
 
 			close(done)
 			wg.Done()

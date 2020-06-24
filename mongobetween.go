@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
-	"go.uber.org/zap/zapcore"
 	"os"
 	"os/signal"
 	"sync"
 	"syscall"
 	"time"
+
+	"go.uber.org/zap/zapcore"
 
 	"go.uber.org/zap"
 
